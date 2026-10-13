@@ -36,7 +36,7 @@ jiaan-signin/
 | `FEISHU_APP_SECRET` | 同一应用的 App Secret |
 | `FEISHU_APP_TOKEN` | `SwoobWgjJaURClsBcsgcfSIhnde` |
 | `FEISHU_TABLE_ID` | `tbldG1LXQYkP63cB` |
-| `ADMIN_PASSWORD` | 自己设置的后台密码，至少 12 个字符 |
+| `ADMIN_PASSWORD` | 自己设置的后台密码，至少 7 个字符 |
 | `NODE_ENV` | `production` |
 
 App Secret、后台密码不要放进 HTML、GitHub 仓库、二维码网址或聊天记录。平台会提供 `PORT`，云端无需自行填写。
@@ -146,7 +146,7 @@ npm start
 
 - **页面能打开，但不能签到**：检查四个飞书变量是否来自同一个应用和表格、App Secret 是否复制完整。后台配置检查与错误提示可以帮助定位。
 - **有字段格式错误**：按错误提示核对当前字段类型和名称；不要另建表格。字段列表读取权限也需要在已配置应用中生效。
-- **后台登录不了**：`ADMIN_PASSWORD` 至少 12 个字符。检查平台变量是否已保存并重新部署，云端通过 HTTPS 打开。
+- **后台登录不了**：`ADMIN_PASSWORD` 至少 7 个字符。检查平台变量是否已保存并重新部署，云端通过 HTTPS 打开。
 - **人数出现错误或刷新失败**：不要把错误当成零人。程序不会静默返回前几页；等待网络恢复后刷新。
 - **旧版目录部署后找不到页面**：本项目已把 `public` 与根目录入口整合；平台根目录要指向包含 `package.json` 的位置。
 

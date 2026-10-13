@@ -30,7 +30,7 @@ function createApp({ env = process.env, client = createFeishuClient({ env }), no
   app.use(express.json({ limit: '16kb', strict: true }));
   const cookieOptions = { httpOnly: true, sameSite: 'strict', secure: env.NODE_ENV === 'production', path: '/api' };
   function adminPassword() {
-    if (typeof env.ADMIN_PASSWORD !== 'string' || env.ADMIN_PASSWORD.length < 12) throw new AppError('后台尚未配置完成，请设置至少 12 个字符的 ADMIN_PASSWORD。', 503);
+    if (typeof env.ADMIN_PASSWORD !== 'string' || env.ADMIN_PASSWORD.length < 7) throw new AppError('后台尚未配置完成，请设置至少 7 个字符的 ADMIN_PASSWORD。', 503);
     return env.ADMIN_PASSWORD;
   }
   function signature(value) { return createHmac('sha256', adminPassword()).update(`jiaan-session-v1:${value}`).digest('base64url'); }
