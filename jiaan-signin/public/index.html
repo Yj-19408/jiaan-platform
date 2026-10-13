@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fff1f5">
+<link rel="icon" type="image/jpeg" href="/logo.jpg">
+<title>嘉安月嫂活动签到</title>
+<link rel="stylesheet" href="/style.css">
+<script src="/sign.js" defer></script>
+</head>
+<body class="sign-page">
+<main class="card sign-card">
+<h2><img class="brand-logo" src="/logo.jpg" alt="嘉安品牌标识"> 嘉安月嫂</h2>
+<h2>社区助就业·养老服务活动签到</h2>
+<form id="sign-form">
+<label class="sr-only" for="name">姓名</label>
+<input id="name" name="name" placeholder="请输入姓名" autocomplete="name" maxlength="40" required>
+<label class="sr-only" for="phone">联系电话</label>
+<input id="phone" name="phone" type="tel" inputmode="tel" placeholder="请输入联系电话" autocomplete="tel" maxlength="20" required>
+<label class="sr-only" for="person">签到人员</label>
+<select id="person" name="person" aria-label="签到人员">
+<option>社区居民</option><option>求职人员</option><option>月嫂</option><option>育婴师</option><option>养老护理员</option><option>工作人员</option>
+</select>
+<label class="sr-only" for="project">参与项目</label>
+<select id="project" name="project" aria-label="参与项目">
+<option>就业咨询</option><option>月嫂培训咨询</option><option>育婴服务咨询</option><option>养老护理咨询</option><option>家政服务咨询</option><option>其他</option>
+</select>
+<button id="submit" type="submit">立即签到</button>
+<p id="sign-status" class="status" role="status" aria-live="polite"></p>
+</form>
+<div id="ok" hidden role="status" tabindex="-1">🎉 签到成功！</div>
+<a class="admin-link" href="/admin.html">管理员入口</a>
+</main>
+</body>
+</html>

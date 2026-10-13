@@ -1,0 +1,10 @@
+{
+  "name": "jiaan-community-signin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "嘉安月嫂社区助就业·养老服务活动签到系统",
+  "main": "server.js",
+  "engines": { "node": ">=22" },
+  "scripts": { "start": "node server.js", "dev": "node --watch server.js", "test": "node --test" },
+  "dependencies": { "dotenv": "16.6.1", "express": "5.1.0" }
+}

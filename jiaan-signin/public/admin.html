@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fff1f5">
+<link rel="icon" type="image/jpeg" href="/logo.jpg">
+<title>嘉安月嫂 · 签到后台</title>
+<link rel="stylesheet" href="/style.css">
+<script src="/admin.js" defer></script>
+</head>
+<body class="admin-page">
+<main class="admin-wrap">
+<section id="login-panel" class="card login-card">
+<h1><img class="brand-logo" src="/logo.jpg" alt="嘉安品牌标识"> 嘉安月嫂</h1><h2>活动签到后台</h2>
+<p class="small">请输入后台密码，查看签到情况。</p>
+<form id="login-form"><label for="password">后台密码</label><input id="password" type="password" autocomplete="current-password" required><button id="login-button" type="submit">登录后台</button></form>
+<p id="login-status" class="status" role="status" aria-live="polite">正在检查登录状态…</p>
+</section>
+<div id="dashboard" hidden>
+<section class="card">
+<h1><img class="brand-logo" src="/logo.jpg" alt="嘉安品牌标识"> 嘉安月嫂</h1><h2>社区助就业·养老服务活动签到</h2>
+<div class="toolbar"><button id="refresh" type="button">刷新数据</button><button id="logout" class="secondary" type="button">退出登录</button></div>
+<p id="dashboard-status" class="status" role="status" aria-live="polite"></p>
+<p id="updated" class="small">尚未读取签到数据</p>
+<p class="small">页面打开时每 20 秒自动刷新</p>
+</section>
+<section class="card"><h2>签到人数</h2><p id="total" class="total">—</p><p class="small">按当前飞书表格全部记录计算</p></section>
+<section class="card"><h2>参与项目统计</h2><ul id="projects" class="counts"></ul></section>
+<section class="card"><h2>签到人员统计</h2><ul id="people" class="counts"></ul></section>
+<section class="card"><h2>签到名单</h2><p id="list-summary" class="small">尚未读取</p><ul id="records" class="records"></ul>
+<nav class="pager" aria-label="签到名单分页"><button id="previous" class="secondary" type="button">上一页</button><span id="page-info">—</span><button id="next" class="secondary" type="button">下一页</button></nav>
+</section>
+</div>
+<footer><a href="/">返回签到页</a></footer>
+</main>
+</body>
+</html>
